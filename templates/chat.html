@@ -1,0 +1,12 @@
+<h2>Ask the AI Assistant</h2>
+<form method="post">
+  <input type="text" name="question" placeholder="Ask your question" required>
+  <button type="submit">Ask</button>
+</form>
+
+{% if answer %}
+  <h3>Answer:</h3>
+  <p>{{ answer }}</p>
+{% endif %}
+
+<a href="{{ url_for('index') }}">Back to Home</a>
